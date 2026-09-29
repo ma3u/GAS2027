@@ -341,7 +341,7 @@ a.shot-link:hover { transform: translateY(-2px); }
   flex: none;
   margin-top: auto;
   display: grid;
-  grid-template-columns: 264px 1fr;
+  grid-template-columns: 400px 1fr;
   gap: 24px;
   align-items: center;
   padding: 16px 20px;
@@ -351,7 +351,7 @@ a.shot-link:hover { transform: translateY(-2px); }
 }
 .closing .comic { line-height: 0; }
 .closing .comic img {
-  width: 264px; height: 264px; display: block;
+  width: 400px; height: 264px; display: block;
   object-fit: cover; object-position: center;
 }
 .closing .say {
@@ -381,5 +381,15 @@ a.shot-link:hover { transform: translateY(-2px); }
   right: 14px; bottom: 10px;
 }
 .reveal .controls { color: var(--ink-3); }
+
+/* ---------- slide 4 : the strip, full bleed ---------------------------- */
+
+.reveal .slides > section#strip { padding: 0; gap: 0; }
+.reveal .slides > section#strip::after {
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 160px 40px rgba(10,14,26,.55);
+}
 
 @media print { .reveal-viewport::before { display: none; } }
